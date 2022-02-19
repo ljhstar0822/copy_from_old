@@ -1,6 +1,15 @@
 @import "reset.css";
 
-
 .hidden {
-    display: none;
+  display: none;
+}
+
+img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
 }

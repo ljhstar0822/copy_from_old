@@ -4,29 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Momentum</title>
   </head>
-  <body>
+  <body class="background">
     <header class="geolocation">날씨</header>
     <main>
-      <div class="">
+      <div class="clock">
         <h1 class="clock-day"></h1>
         <h2 class="clock-hours"></h2>
       </div>
 
-
-        <form class="user-info__form">
-          <input
-            required
-            type="text"
-            id="user-info__input"
-            placeholder="Write Your Name and Press Enter"
-          />
-          <button>login</button>
+      <div class="user-info">
+        <form class="user-info__form hidden">
+            <input
+                required
+                type="text"
+                id="user-info__input"
+                placeholder="Write Your Name and Press Enter"
+            />
+                <input type="submit" value="Log-In">
         </form>
-      <h1 class="greeting hidden"></h1>
+        <h1 class="greeting hidden"></h1>
+    </div>
+
+    <div class="todo">
+        <form class="todo-form">
+            <input type="text" placeholder="Please Write What You Need To Do!!">
+            
+        </form>
+        <ul class="todo-list">
+
+        </ul>
+    </div>
+
+
+
+
     </main>
+
+
+
 
     <footer class="quotes">
         <span></span>
@@ -38,6 +56,8 @@
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
     <script src="https://kit.fontawesome.com/693b75880e.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -5,8 +5,13 @@ const greeting = document.querySelector(".greeting");
 
 function loginSubmit(event){
     event.preventDefault();
+    const username = userInput.value;
+   
     userForm.classList.add("hidden");
+    greeting.innerText = `Hello! ${userInput.value}`;
+    greeting.classList.remove("hidden");
 
+    
 }
 
 
