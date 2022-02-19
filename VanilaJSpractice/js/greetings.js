@@ -3,21 +3,31 @@ const userInput = document.getElementById("user-info__input");
 const userBtn = userForm.querySelector("button");
 const greeting = document.querySelector(".greeting");
 
+
+const HIDDEN = "hidden";
+const USERNAME = "username";
+
+
 function loginSubmit(event){
     event.preventDefault();
     const username = userInput.value;
-   
-    userForm.classList.add("hidden");
-    greeting.innerText = `Hello! ${userInput.value}`;
-    greeting.classList.remove("hidden");
-
-    
+    localStorage.setItem(USERNAME, username);
+    userForm.classList.add(HIDDEN);
+    paintGreeting(username);
 }
 
 
+function paintGreeting(username) {
+    greeting.innerText = `Hello! ${username}`;
+    greeting.classList.remove(HIDDEN);
+}
+
+const savedUsername = localStorage.getItem(USERNAME);
 
 
-
-
-
-userBtn.addEventListener("click", loginSubmit);
+if (savedUsername === null) {
+    userForm.classList.remove(HIDDEN);
+    userForm.addEventListener("submit", loginSubmit);
+} else {
+    paintGreeting(savedUsername);
+}
