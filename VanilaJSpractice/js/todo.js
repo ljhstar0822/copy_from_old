@@ -9,9 +9,18 @@ function savedTodo(){
     localStorage.setItem(TODOS, JSON.stringify(toDos));
 }
 
+
+
 function deleteTodo(event){
     const li = event.target.parentElement;
     li.remove();
+    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
+    savedTodo();
+}
+
+function crossOut(event){
+    const li = event.target.parentElement;
+    li.classList.toggle("checked");
 }
 
 function paintTodo(newTodo){
@@ -21,7 +30,11 @@ function paintTodo(newTodo){
     span.innerText = newTodo.text;
     const btn = document.createElement("button");
     btn.innerText = "❌";
+    const check = document.createElement("button");
+    check.innerText = "✔️";
     btn.addEventListener("click", deleteTodo);
+    check.addEventListener("click", crossOut);
+    li.appendChild(check);
     li.appendChild(span);
     li.appendChild(btn);
     todoList.appendChild(li);
@@ -35,7 +48,8 @@ function sendTodoList(event){
         text: newTodo,
         id: Date.now(),
     };
-    toDos.push(newTodoObj);
+    console.log(toDos);
+    toDos.push(newTodoObj)
     paintTodo(newTodoObj);
     savedTodo();
 }
@@ -43,9 +57,11 @@ function sendTodoList(event){
 todoForm.addEventListener("submit", sendTodoList);
 
 const savedTodos = localStorage.getItem(TODOS);
-
 if (savedTodo !==null) {
     const parsedToDos = JSON.parse(savedTodos);
     toDos = parsedToDos;
     parsedToDos.forEach(paintTodo);
-}
+    
+} 
+
+

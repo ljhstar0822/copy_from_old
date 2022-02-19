@@ -1,5 +1,5 @@
 @import "reset.css";
-
+@import "calculator.css";
 .hidden {
   display: none;
 }
@@ -12,4 +12,8 @@ img {
   width: 100%;
   z-index: -1;
   opacity: 0.8;
+}
+
+.checked {
+  text-decoration-line: line-through;
 }
