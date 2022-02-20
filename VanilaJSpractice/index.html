@@ -5,40 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Momentum</title>
+    <title>VanilaJS</title>
   </head>
   <body class="background">
     <header class="geolocation">
       <span class="city"></span>
       <span class="weather"></span>
     </header>
-    <main>
-      <div class="clock">
-        <h1 class="clock-day"></h1>
-        <h2 class="clock-hours"></h2>
-      </div>
-
-      <div class="user-info">
+    <div class="clock">
+      <h1 class="clock-day"></h1>
+      <h2 class="clock-hours"></h2>
+    </div>
+    <main class="user-container">
         <form class="user-info__form hidden">
             <input
                 required
                 type="text"
                 id="user-info__input"
+                size="45"
                 placeholder="Write Your Name and Press Enter"
             />
-                <input type="submit" value="Log-In">
+            <input type="submit" value="Log-In">
         </form>
         <h1 class="greeting hidden"></h1>
-    </div>
-
+    </main>
     <div class="todo">
-        <form class="todo-form">
-            <input type="text" placeholder="Please Write What You Need To Do!!">
-        </form>
-        <ul class="todo-list">
+      <form class="todo-form">
+          <input type="text" size="53" placeholder="Please Write What You Need To Do!!">
+      </form>
+      <ul class="todo-list">
 
-        </ul>
-    </div>
+      </ul>
+  </div>
     <section class="calculator">
       <form name="forms">
         <input type="text" name="output" readonly>
@@ -58,16 +56,10 @@
         <input type="button" class="operator" value="-" onclick="document.forms.output.value += '-'">
         <input type="button" class="dot" value="." onclick="document.forms.output.value += '.'">
         <input type="button" value="0" onclick="document.forms.output.value += 0">
-        <input type="button" class="operator result" value="=" onclick="document.forms.output.value = eval(document.forms.output.value)"
-
+        <input type="button" class="operator result" value="=" onclick="document.forms.output.value = eval(document.forms.output.value)">
       </form>
 
     </section>
-
-    </main>
-
-
-
 
     <footer class="quotes">
         <span></span>
@@ -84,5 +76,11 @@
     <script src="js/weather.js"></script>
     <script src="js/calculator.js"></script>
     <script src="https://kit.fontawesome.com/693b75880e.js" crossorigin="anonymous"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+      </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Redressed&family=Shizuru&display=swap');
+    </style>
 </body>
 </html>

@@ -1,0 +1,27 @@
+.geolocation {
+  grid-column: 1 / -1;
+}
+
+.clock {
+  grid-column: 1;
+  grid-row: 2 / span 2;
+}
+
+.user-container {
+  grid-column: 3;
+  grid-row: 2 / span 1;
+}
+
+.todo {
+  grid-column: 3;
+  grid-row: 3 / span 2;
+}
+
+.calculator {
+  grid-row: 4 / -2;
+}
+
+.quotes {
+  grid-column: 1 / -1;
+  grid-row: -2;
+}

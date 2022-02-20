@@ -19,6 +19,7 @@
   cursor: pointer;
   font-size: 15px;
   font-weight: 500;
+  transition: all 0.5s ease-in-out;
 }
 
 .calculator form input:hover {
